@@ -2,30 +2,97 @@
 <html lang="en">
 <head>
     <title>Survey Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.css" integrity="sha512-LKG0Zi6duJ5mwncLtQVchN0iF8fWmcxApuX9pqGq7ITgwQDWR9EqZFsrV9TXfE9pPRa1J6GVnsBl7gKxAyllaA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    
 </head>
 <style>
-    form
-        {
+    body
+{
+    font-family: 'Courier New', Courier, monospace;
+    background-image:url("LOGIN BACKGROUND.jpg");
+    background-repeat: no-repeat;
+            background-size: cover;
+}
+   
+        label
+{
+    color:blue;
+    text-align: left;
+    font-weight: bold;
+}
+.container
+{
     
-            background-color:white;
-            padding: 40px;
+    background-color:black;
+            padding: 20px;
             width:500px;
             box-shadow:0 0 10px greenyellow;
             border: 2px solid goldenrod;
             
-        }
+}
+input[type=text],input[type=password]
+{
+    width: 200px;
+    padding: 10px;
+    margin:5px 0 22px 0;
+    display: inline-block;
+    border: none;
+}
+input[type=radio]
+{
+    color:chartreuse;
+}
+input[type=text]:focus,input[type=password]:focus
+{
+    background-color: lightskyblue;
+    outline: none;
+}
+div{
+    padding: 10px 0;
+}
+hr{
+    border: 1px solid blue;
+}
+.submit
+{
+    
+    
+    padding: 15px 20px;    
+    cursor:pointer;
+
+    opacity: 0.9;
+    color:white;
+            font-weight: bold;
+            background-color:red;
+            border: 2px solid white;
+            height: 40px;
+            width: 150px;
+            border-radius: 10px;
+            padding-top: 10px;
+            margin-top: 20px;
+}
+.submit:hover
+{
+    opacity: 1;
+}
+       
+
 
 </style>
 <body>
-    <div>
+    
+        <center>
         <form>
-            <h1>SOFTWARE SURVEY </h1>
+            <div class="container">
+            
+            <h1 style="color: red;">SOFTWARE SURVEY </h1><hr>
             <table>
                 <tr>
-                    <td>
+                    <td> 
                         <label>YOUR NAME</label>
                     </td>
-                    <td>
+                        <td>
                         <input type="text" placeholder="Enter Username" name="Username"required/>
                     </td>
                 </tr>
@@ -44,10 +111,138 @@
                         <td>
                             <input type="text"placeholder="Enter Contact-No"name="Contact-No"required/> 
                         </td>
-                        </tr>   
+                        </tr> 
                         
-        </form>
+                        <div>
+                            <tr>
+                                <td>
+                            <label><b>Gender:</b></label>
+                        </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <input type="radio" value="Male"name="gender"checked><color style="color: chartreuse;">Male</color>
+                        </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <input type="radio" value="Female"name="gender"checked><color style="color:chartreuse;">FeMale</color>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="radio" value="Other"name="gender"checked><color style="color:chartreuse;">Other</color>
+                        </td>
+                        </tr>
+                        
+                        </div>
+                        <div>
+                            <tr>
+                                <td colspan="2">
+                        <label> Did you hear about our Software?</label>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type="radio" value="Email"name="soft"checked><color style="color:chartreuse;">Email</color>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                            <input type="radio" value="Word of Mout"name="soft"checked><color style="color:chartreuse">Word of Mout</color>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" value="Social Media"name="soft"checked><color style="color:chartreuse">Social Media</color>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="radio" value="Advertisement"name="soft"checked><color style="color:chartreuse">Advertisement</color><br>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="radio" value="Other"name="soft"checked><color style="color:chartreuse;">Other</color>
+                        </td>
+                        </tr>
+                        
+                        </div>
+                        <div>
+                            <tr>
+                                <td>
+                           <label> Which Platform do you use?</label>
+                        </td>
+                        </tr>
+                            <tr>
+                                <td>
+                            <input type="checkbox" value="Windows"name="plat"checked><color style="color:chartreuse;">Windows</color>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="checkbox" value="MacOS"name="plat"checked><color style="color:chartreuse">MacOS</color>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="checkbox" value="Linux"name="plat"checked><color style="color:chartreuse;">Linux</color>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="checkbox" value="Other"name="plat"checked><color style="color:chartreuse;">Other</color>
+                        </td>
+                        </tr>
+                        </div>      
+                        <tr>
+                            <td colspan="2">
+                           <label> How would you rate our Software?</label>
+                        </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                            <select>
+                                <color style="color: chartreuse;">
+                                <option value="rating">1</option>
+                                <option value="rating">2</option>
+                                <option value="rating">3</option>
+                                <option value="rating">4</option>
+                                <option value="rating">5</option>
+                                <option value="rating">6</option>
+                                <option value="rating">7</option>
+                                <option value="rating">8</option>
+                                <option value="rating">9</option>
+                                <option value="rating">10</option>
+                            </color>
+                            </select>
+                        </td>
+                        </tr>
+                        <div>
+                            <tr>
+                                <td>
+                      <label>  Feedback </label>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <textarea maxlength="50" >
+
+                        </textarea>
+                    </td>
+                    </tr>
+                    </div>
+                            </table>
+                            <div>
+                            <button type="submit" class="submit">SUBMIT</button>
+                            <button type="reset"class="submit">RESET</button>
+                        </div>
+                             
+      </form>
+    </center> 
     </div>
     
 </body>
-</html>
+</html> 
